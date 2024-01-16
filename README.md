@@ -2,6 +2,12 @@
 
 - create-react-app
 - configured tailwindcss
+- header
+- routing of app
+- sign up form
+- sign in form
+- form validation
+- useRef hook
 
 # feature
 
