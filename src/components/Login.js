@@ -7,9 +7,10 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useRoutes } from "react-router-dom";
+import { useNavigate, useRoutes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/userSlice";
+import { BG } from "../utils/constants";
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -17,7 +18,7 @@ const Login = () => {
   const email = useRef();
   const password = useRef();
   const [errorMessage, setErrorMessage] = useState(null);
-  const Navigate = useRoutes();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSignUp = () => {
@@ -43,7 +44,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name?.current?.value,
-            photoURL: "https://example.com/jane-q-user/profile.jpg",
+            photoURL: "",
           })
             .then(() => {
               const { email, displayName, photoURL, uid } = auth.currentUser;
@@ -55,14 +56,12 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              Navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
             });
         })
         .catch((error) => {
-          const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorMessage);
         });
@@ -74,9 +73,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          Navigate("/browse");
-
-          console.log("sign In", user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -89,10 +85,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/594f8025-139a-4a35-b58d-4ecf8fdc507c/d3c4e455-f0bf-4003-b7cd-511dda6da82a/IN-en-20240108-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="bg"
-        />
+        <img src={BG} alt="bg" />
       </div>
       <form
         onSubmit={(e) => handleFormData(e)}
