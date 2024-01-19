@@ -7,10 +7,9 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate, useRoutes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/userSlice";
-import { BG } from "../utils/constants";
+import { AVATAR_URL, BG } from "../utils/constants";
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -18,7 +17,6 @@ const Login = () => {
   const email = useRef();
   const password = useRef();
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSignUp = () => {
@@ -44,7 +42,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name?.current?.value,
-            photoURL: "",
+            photoURL: AVATAR_URL,
           })
             .then(() => {
               const { email, displayName, photoURL, uid } = auth.currentUser;

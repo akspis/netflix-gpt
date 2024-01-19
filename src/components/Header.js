@@ -12,9 +12,7 @@ const Header = () => {
   const user = useSelector((store) => store.user);
   const signOutUser = () => {
     signOut(auth)
-      .then(() => {
-        navigate("/");
-      })
+      .then(() => {})
       .catch((error) => {
         navigate("/404");
       });

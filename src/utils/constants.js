@@ -6,3 +6,17 @@ export const AVATAR_URL =
 
 export const BG =
   "https://assets.nflxext.com/ffe/siteui/vlv3/594f8025-139a-4a35-b58d-4ecf8fdc507c/d3c4e455-f0bf-4003-b7cd-511dda6da82a/IN-en-20240108-popsignuptwoweeks-perspective_alpha_website_medium.jpg";
+
+export const MOVIE_API_TOKEN =
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOTA0ODQ2OTM3ZDExYjU1YTgwNzU3MGFmOWE2Mjg1OSIsInN1YiI6IjY1YWE0NGYxZTI2N2RlMDEzOGEzMDkyOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kOGU2jdznF8Lptar2PX6NKkMMkpvi_l2fbAtuo5ekFQ";
+
+export const API_KEY = "2904846937d11b55a807570af9a62859";
+
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOTA0ODQ2OTM3ZDExYjU1YTgwNzU3MGFmOWE2Mjg1OSIsInN1YiI6IjY1YWE0NGYxZTI2N2RlMDEzOGEzMDkyOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kOGU2jdznF8Lptar2PX6NKkMMkpvi_l2fbAtuo5ekFQ",
+  },
+};
