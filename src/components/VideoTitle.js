@@ -2,9 +2,9 @@ import React from "react";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className=" bg absolute top-[45%] left-16 text-white">
+    <div className=" bg absolute top-[35%] left-20 text-white">
       <h1 className="font-bold text-6xl">{title}</h1>
-      <p className="w-1/4 py-6">{overview}</p>
+      <p className="w-1/3 py-6">{overview}</p>
       <div>
         <button className="bg-white py-4 px-10 rounded-lg text-black text-xl font-bold hover:bg-opacity-80">
           Play
