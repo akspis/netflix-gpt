@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { addUser, removeUser } from "../redux/userSlice";
 import { AVATAR_URL, LOGO, SUPPORTED_LNAG } from "../utils/constants";
 import { togglePageChange } from "../redux/gptSlice";
-import { changeLanguage } from "../redux/langSlice";
+import { changeLanguage } from "../redux/configSlice";
 
 const Header = () => {
   const navigate = useNavigate();
