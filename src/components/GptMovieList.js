@@ -7,7 +7,7 @@ const GptMovieList = () => {
 
   return (
     gptmovieName && (
-      <div className="bg-black opacity-90 p-8 mt-16">
+      <div className="bg-black opacity-90 p-8 mt-16 m-4">
         {gptmovieName?.map((movie, index) => (
           <MovieList key={movie} title={movie} movies={gptMovieList[index]} />
         ))}
