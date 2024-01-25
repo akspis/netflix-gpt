@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../redux/userSlice";
 import { AVATAR_URL, LOGO, SUPPORTED_LNAG } from "../utils/constants";
-import { togglePageChange } from "../redux/gptSlice";
+import { removeMovies, togglePageChange } from "../redux/gptSlice";
 import { changeLanguage } from "../redux/configSlice";
 
 const Header = () => {
@@ -44,6 +44,7 @@ const Header = () => {
 
   const handleGptSearch = () => {
     dispatch(togglePageChange());
+    removeMovies();
   };
 
   const handleLangauageChange = (e) => {

@@ -16,8 +16,8 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOTA0ODQ2OTM3ZDExYjU1YTgwNzU3MGFmOWE2Mjg1OSIsInN1YiI6IjY1YWE0NGYxZTI2N2RlMDEzOGEzMDkyOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kOGU2jdznF8Lptar2PX6NKkMMkpvi_l2fbAtuo5ekFQ",
+    Authorization: "Bearer " + MOVIE_API_TOKEN, //REACT_APP_MOVIE_API_TOKEN
+    //
   },
 };
 
@@ -37,3 +37,5 @@ export const SUPPORTED_LNAG = [
     name: "Spanish",
   },
 ];
+
+export const OPENAI_KEY = "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"; //process.env.REACT_APP_OPENAI_KEY
