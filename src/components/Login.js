@@ -25,10 +25,7 @@ const Login = () => {
 
   const handleFormData = (e) => {
     e.preventDefault();
-    const message = checkValidate(
-      email.current?.value,
-      password.current?.value
-    );
+    const message = checkValidate(email.current?.value);
     setErrorMessage(message);
     if (message) return;
 
@@ -81,13 +78,13 @@ const Login = () => {
   };
   return (
     <div>
-      <Header />
-      <div className="absolute">
-        <img src={BG} alt="bg" />
+      <div className="fixed ">
+        <img src={BG} alt="bg" className="h-screen object-cover md:w-screen" />
       </div>
+      <Header />
       <form
         onSubmit={(e) => handleFormData(e)}
-        className="w-3/12 bg-black bg-opacity-80 absolute mx-auto my-36 right-0 left-0 p-14 text-white rounded"
+        className="w-full md:w-3/12 bg-black bg-opacity-80 absolute mx-auto my-36 right-0 left-0 p-14 text-white rounded"
       >
         <h1 className="font-semibold text-3xl">
           {isSignUp ? "Sign In" : "Sign Up"}

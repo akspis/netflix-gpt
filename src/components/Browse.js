@@ -5,7 +5,7 @@ import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 
 const Browse = () => {
-  const showGpt = useSelector((store) => store.gpt.showGptPage);
+  const showGpt = useSelector((store) => store?.gpt?.showGptPage);
   return (
     <div>
       <Header />
