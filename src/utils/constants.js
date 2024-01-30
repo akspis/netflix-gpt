@@ -38,4 +38,8 @@ export const SUPPORTED_LNAG = [
   },
 ];
 
-export const OPENAI_KEY = "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"; //process.env.REACT_APP_OPENAI_KEY
+export const SIDEBAR_IMG =
+  "https://www.shutterstock.com/shutterstock/photos/1187766172/display_1500/stock-vector-down-arrow-vector-icon-isolated-on-transparent-background-down-arrow-transparency-logo-concept-1187766172.jpg";
+
+export const BACK_ICON =
+  "https://cdn4.iconfinder.com/data/icons/iphone_toolbar_icons/iphone_toolbar_icons/arrowleft.png";

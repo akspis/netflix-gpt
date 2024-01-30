@@ -60,7 +60,7 @@ const Header = () => {
   };
 
   const SideBar = () => (
-    <div className="flex-col bg-slate-600 bg-opacity-70 relative top-24">
+    <div className="flex-col bg-slate-600 bg-opacity-70 relative top-24 md:hidden">
       <button
         className="bg-red-700 py-3 px-4 rounded-lg text-white m-2"
         onClick={handleGptSearch}
@@ -113,7 +113,7 @@ const Header = () => {
             <img
               src={AVATAR_URL}
               alt="profile"
-              className="hidden md:block h-12 w-12"
+              className="hidden md:block h-12 w-12 rounded-lg"
             />
             <p
               className="hidden md:block text-white font-xl"
